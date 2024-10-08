@@ -1,0 +1,1 @@
+The Shop USC App is designed for members of the USC Community

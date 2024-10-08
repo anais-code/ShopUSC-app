@@ -1,0 +1,17 @@
+/* Colors for app 
+Green - #127D3B
+Yellow - #FEB712
+White - #F5F5F5
+Black - #071013
+Grey - #444054
+Pink/Red - #E36588*/
+
+body {
+    background-color: #f5f5f5;
+}
+
+
+main {
+    margin-top: 5em;
+    padding: 1em;
+}
