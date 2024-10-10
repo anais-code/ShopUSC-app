@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="imgs/USC-7-removebg-preview.png">
+        <link rel="icon" type="image/png" href="/assets/imgs/USC-7 Background Removed.png">
         <title>Shop USC</title>
-        <link rel="stylesheet" href="assets/styles/styles.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
