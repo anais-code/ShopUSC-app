@@ -20,6 +20,8 @@
             <div class= "button-container">
                 <a href="<?= base_url('buyer_signup') ?>" class="buyer-btn">Buyer</a>
                 <a href="<?= base_url('seller_signup') ?>" class="seller-btn">Seller</a>
+                <a href="buyer_login.php" class="buyer-btn">Login as Buyer</a>
+                <a href="seller_login.php" class="seller-btn">Login as Seller</a>
 </div>
         </main>
 

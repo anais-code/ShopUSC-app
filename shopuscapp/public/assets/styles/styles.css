@@ -137,3 +137,69 @@ h2{
 .footer-lsm{
     margin-top: 50px;
 }
+
+/* ================== */
+/* Buyer Login Styles */
+/* ================== */
+
+body {
+    background-color: #f9f9f9; /* Light off-white background */
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: green; /* Bright green */
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px; /* Large font size */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid lightgreen; /* Light green outline */
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #4CAF50, #81C784); /* Gradient green */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup-link {
+    margin-top: 10px;
+    display: block;
+    color: green; /* Brighter green */
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    height: 50px; /* Logo height */
+}
