@@ -27,3 +27,8 @@ $routes->post('auth/loginSeller', 'Authentication::loginSeller');
 //routes to return views after login
 $routes->get('seller_dashboard', 'SellerController::index');
 $routes->get('business_listing', 'BuyerController::index');
+
+//$routes->post('seller/postAd', 'SellerController::postAd');
+$routes->post('post_ad', 'SellerController::postAd'); // To handle ad submission
+
+

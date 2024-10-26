@@ -1,3 +1,4 @@
+
 (() => {
     'use strict'
 
@@ -49,3 +50,5 @@ function updateCharCount() {
     const charsRemaining = 500 - textarea.value.length;
     charCount.textContent = charsRemaining + " characters remaining";
 }
+
+
