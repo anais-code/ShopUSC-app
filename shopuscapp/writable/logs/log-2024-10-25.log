@@ -1,0 +1,116 @@
+ERROR - 2024-10-25 03:06:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outloo...', 'Sweet#reat2')
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outloo...', 'Sweet#reat2')
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-10-25 03:06:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seller`
+WHERE `Email` = :Email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outlook.com', 'Sweet#reat2')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-25 03:07:15 --> TypeError: CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php on line 271
+in SYSTEMPATH\Database\BaseResult.php on line 399.
+ 1 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Models\BusinessModel.php(32): CodeIgniter\BaseModel->first()
+ 4 APPPATH\Controllers\SellerController.php(26): App\Models\BusinessModel->getAdBySeller('2')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-25 03:08:33 --> TypeError: CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php on line 271
+in SYSTEMPATH\Database\BaseResult.php on line 399.
+ 1 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Models\BusinessModel.php(32): CodeIgniter\BaseModel->first()
+ 4 APPPATH\Controllers\SellerController.php(26): App\Models\BusinessModel->getAdBySeller('2')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-25 03:08:35 --> TypeError: CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php on line 271
+in SYSTEMPATH\Database\BaseResult.php on line 399.
+ 1 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Models\BusinessModel.php(32): CodeIgniter\BaseModel->first()
+ 4 APPPATH\Controllers\SellerController.php(26): App\Models\BusinessModel->getAdBySeller('2')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-25 03:11:06 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\seller_dashboard.php on line 75.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('seller_dashboard', [], true)
+ 4 APPPATH\Controllers\SellerController.php(64): view('seller_dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-25 03:12:54 --> ErrorException: Undefined variable $message
+in APPPATH\Views\seller_dashboard.php on line 79.
+ 1 APPPATH\Views\seller_dashboard.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\seller_dashboard.php', 79)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\seller_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('seller_dashboard', [], true)
+ 5 APPPATH\Controllers\SellerController.php(64): view('seller_dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-25 03:17:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\SellerController::$businessModel is deprecated in APPPATH\Controllers\SellerController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->postAd()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-25 03:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

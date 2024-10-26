@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\BuyerModel;
+use App\Models\BusinessModel;
 
 
 class BuyerController extends BaseController
@@ -18,6 +19,10 @@ class BuyerController extends BaseController
         $data =[
             'firstName' => $firstName,
         ];
+        //show business data 
+        $businessModel = new BusinessModel();
+        $data['businesses'] = $businessModel->getAllBusinessData();
+        
         return view('business_listing', $data);
     }
 }

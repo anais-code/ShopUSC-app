@@ -152,18 +152,14 @@ h1 {
     text-align: center;
 }
 
-footer {
-    background-color: #23C065;
-    color: white;
-    padding: 1em 0;
-}
+
 
 .user-icon {
     max-height: 30px;
 }
 
 .package-logo {
-    max-height: 30px;
+    max-height: 40px;
 }
 
 .text-center {
@@ -216,12 +212,18 @@ h1, h2, h3, h4, h5 {
 }
 
 footer {
-    background-color: #23C065;
+    background-color: rgba(118,218,72);
     color: white;
     padding: 1em 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+footer {
+    background-color: rgba(118,218,72);
+    color: white;
+    padding: 1em 0;
 }
 
 .container {
@@ -246,7 +248,7 @@ footer {
 }
 
 .package-logo {
-    max-height: 30px;
+    max-height: 40px;
 }
 
 .text-success {
