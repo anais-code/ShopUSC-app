@@ -24,7 +24,7 @@
                 <span class="navbar-text" style="margin-left: 0.5em;">Welcome <?= esc($firstName); ?></span>
             </div>
         </div>
-    </nav>
+    </nav> 
     
     <div class="container-sm">
         <div class="row">
