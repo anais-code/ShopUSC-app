@@ -19,24 +19,24 @@ class SellerController extends BaseController
         $businessType = $seller['BusinessType'];
         $businessCategory = $seller['BusinessCategory'];
         $businessDescription = $seller['BusinessDescription'];
-        //pass their information to the view
+        
 
-         // Check if the seller has an ad
-    $businessModel = new BusinessModel();
-    $ad = $businessModel->getAdBySeller($sellerID);
+         //get ad for seller based on seller id
+        $businessModel = new BusinessModel();
+        $ad = $businessModel->getAdBySeller($sellerID);
 
-    if ($ad) {
-        // Pass the ad details if it exists
-        $data = [
-            'firstName' => $firstName,
-            'businessName' => $businessName,
-            'businessType' => $businessType,
-            'businessCategory' => $businessCategory,
-            'businessDescription' => $businessDescription,
-            'ad' => $ad, // passing ad details
-        ];
-    } else {
-        // If no ad, pass the form visibility flag
+        //check if ad exists and pass seller and ad details
+        if ($ad) {
+            $data = [
+                'firstName' => $firstName,
+                'businessName' => $businessName,
+                'businessType' => $businessType,
+                'businessCategory' => $businessCategory,
+                'businessDescription' => $businessDescription,
+                'ad' => $ad, // passing ad details
+            ];
+        } else {
+        //if seller doesn't have an ad then pass null along with a message
         $data = [
             'firstName' => $firstName,
             'businessName' => $businessName,
@@ -44,30 +44,32 @@ class SellerController extends BaseController
             'businessCategory' => $businessCategory,
             'businessDescription' => $businessDescription,
             'ad' => null,
-            'message' => 'No ad to display', // message for no ad
+            'message' => 'No ad to display',
         ];
     }
-
         return view('seller_dashboard', $data);
     }
 
+    //function to take form data from seller dash to save ad
     public function postAd()
     {
         $this->businessModel = new BusinessModel();
+
+        //groups all form items with post method
         if ($this->request->getMethod() === 'post'){
+
+            //gets uploaded cover photo, checks validity and saves a copy to uploads folder with rand name
             $coverPhoto = $this->request->getFile('cover-photo');
-            
             if($coverPhoto->isValid() && !$coverPhoto->hasMoved()){
                 $coverName = $coverPhoto->getRandomName();
                 $coverPhoto->move(WRITEPATH . '../public/assets/uploads', $coverName);
             }
     
-            // Retrieve product details and costs
+            //gets product details and costs and combines into assoc array
             $productDetails = $this->request->getPost('product-details');
             $productCosts = $this->request->getPost('product-cost');
-    
-            // Combine product details and costs into an associative array
             $combinedDetails = [];
+            //loop to combine for each row of form data
             foreach ($productDetails as $index => $detail) {
                 $combinedDetails[] = [
                     'detail' => $detail,
@@ -75,14 +77,15 @@ class SellerController extends BaseController
                 ];
             }
     
+            //sets ad data for specific seller
             $data = [
                 'SellerID' => session()->get('user_id'),
                 'CoverPhoto' => 'assets/uploads/' . $coverName,
                 'ProductDetails' => json_encode($combinedDetails),
                 'Availability' => nl2br($this->request->getPost('availability')),
             ];
-    
-            // Insert ad data
+
+            //inserts ad into businessad db and redirects seller to dash to see ad details
             $this->businessModel->saveAd($data);
             return redirect()->to('seller_dashboard');
         }

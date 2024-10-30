@@ -28,7 +28,12 @@ $routes->post('auth/loginSeller', 'Authentication::loginSeller');
 $routes->get('seller_dashboard', 'SellerController::index');
 $routes->get('business_listing', 'BuyerController::index');
 
-//$routes->post('seller/postAd', 'SellerController::postAd');
-$routes->post('post_ad', 'SellerController::postAd'); // To handle ad submission
+//posts ad to businessad table
+$routes->post('post_ad', 'SellerController::postAd');
 
 
+//gets business details from seller + businessad tables
+$routes->get('buyer/viewBusinessDetails/(:num)', 'BuyerController::viewBusinessDetails/$1');
+
+//posts order to transactions table
+$routes->post('buyer/postTransaction/(:num)', 'BuyerController::postTransaction/$1');

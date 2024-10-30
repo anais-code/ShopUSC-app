@@ -1,0 +1,698 @@
+INFO - 2024-10-28 03:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:03:25 --> ErrorException: Undefined variable $firstName
+in APPPATH\Views\business_details.php on line 21.
+ 1 APPPATH\Views\business_details.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $firstName', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(30): view('business_details')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->bus_deets()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:05:02 --> ErrorException: Undefined variable $businessType
+in APPPATH\Views\business_details.php on line 64.
+ 1 APPPATH\Views\business_details.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $businessType', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(44): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->bus_deets()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:06:04 --> ErrorException: Undefined variable $businessType
+in APPPATH\Views\business_details.php on line 64.
+ 1 APPPATH\Views\business_details.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $businessType', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(44): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->bus_deets()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:41:10 --> ErrorException: Undefined array key "AdID"
+in APPPATH\Views\business_listing.php on line 56.
+ 1 APPPATH\Views\business_listing.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AdID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_listing.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_listing.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_listing', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(26): view('business_listing', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:47:13 --> Error: Call to a member function table() on null
+in APPPATH\Models\BusinessModel.php on line 24.
+ 1 APPPATH\Controllers\BuyerController.php(24): App\Models\BusinessModel->getAllBusinessData()
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 03:48:52 --> TypeError: CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php on line 271
+in SYSTEMPATH\Database\BaseResult.php on line 399.
+ 1 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Models\BusinessModel.php(48): CodeIgniter\BaseModel->first()
+ 4 APPPATH\Controllers\BuyerController.php(50): App\Models\BusinessModel->getAdByID('1')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:50:02 --> ErrorException: Undefined array key "BusinessName"
+in APPPATH\Views\business_details.php on line 26.
+ 1 APPPATH\Views\business_details.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BusinessName"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:50:42 --> ErrorException: Undefined variable $business
+in APPPATH\Views\business_details.php on line 26.
+ 1 APPPATH\Views\business_details.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $business', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-10-28 03:50:58 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\business_details.php on line 32.
+ 1 APPPATH\Views\business_details.php(32): json_decode(null)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:50:58 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Views\business_details.php on line 32.
+ 1 APPPATH\Views\business_details.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:51:33 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Views\business_details.php on line 32.
+ 1 APPPATH\Views\business_details.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:51:47 --> ErrorException: Undefined array key "BusinessName"
+in APPPATH\Views\business_details.php on line 26.
+ 1 APPPATH\Views\business_details.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BusinessName"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-10-28 03:54:21 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH\Views\business_details.php on line 32.
+ 1 APPPATH\Views\business_details.php(32): json_decode(null)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 03:54:21 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Views\business_details.php on line 32.
+ 1 APPPATH\Views\business_details.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(57): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusiness('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 03:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 03:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 04:19:54 --> TypeError: CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+in SYSTEMPATH\HTTP\SiteURI.php on line 405.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(379): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(58): CodeIgniter\HTTP\SiteURI->baseUrl(null, null)
+ 3 APPPATH\Views\business_listing.php(49): base_url(null)
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_listing.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_listing', [], true)
+ 7 APPPATH\Controllers\BuyerController.php(26): view('business_listing', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 04:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 04:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 05:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 06:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 18:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 18:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 18:51:26 --> ErrorException: Undefined array key "AdID"
+in APPPATH\Views\business_details.php on line 76.
+ 1 APPPATH\Views\business_details.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AdID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 18:53:00 --> ErrorException: Undefined variable $viewBusinessDetails
+in APPPATH\Views\business_details.php on line 76.
+ 1 APPPATH\Views\business_details.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $viewBusinessDetails', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 18:57:41 --> ErrorException: Undefined variable $adDetails
+in APPPATH\Views\business_details.php on line 76.
+ 1 APPPATH\Views\business_details.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $adDetails', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:03:47 --> ErrorException: Undefined array key "AdID"
+in APPPATH\Views\business_details.php on line 76.
+ 1 APPPATH\Views\business_details.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AdID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:21:11 --> ErrorException: Undefined array key "AdID"
+in APPPATH\Views\business_details.php on line 76.
+ 1 APPPATH\Views\business_details.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AdID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:22:24 --> ErrorException: Undefined array key "AdID"
+in APPPATH\Views\business_details.php on line 79.
+ 1 APPPATH\Views\business_details.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AdID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php', 79)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Views\\business_details.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('business_details', [], true)
+ 5 APPPATH\Controllers\BuyerController.php(42): view('business_details', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->viewBusinessDetails('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 19:26:07 --> ErrorException: Undefined array key "SellerID"
+in APPPATH\Controllers\BuyerController.php on line 64.
+ 1 APPPATH\Controllers\BuyerController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "SellerID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Controllers\\BuyerController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-28 19:27:38 --> ErrorException: Undefined array key "SellerID"
+in APPPATH\Controllers\BuyerController.php on line 64.
+ 1 APPPATH\Controllers\BuyerController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "SellerID"', 'C:\\xampp\\htdocs\\ShopUSC\\shopuscapp\\app\\Controllers\\BuyerController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 19:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 19:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:31:18 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:31:18 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:31:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:31:18 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('1')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 19:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:42:05 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:42:05 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:42:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:42:05 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(75): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 19:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 19:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:44:13 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(74): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:44:13 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(74): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:44:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(74): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:44:13 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(74): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:52:04 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:52:04 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:52:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:52:04 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:52:37 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:52:37 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:52:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:52:37 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-28 19:54:52 --> mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad` in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `bu...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BusinessModel.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-10-28 19:54:52 --> CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:54:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-10-28 19:54:52 --> [Caused by] mysqli_sql_exception: CONSTRAINT `businessad.ProductDetails` failed for `shopusc_db`.`businessad`
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `businessad` (`SellerID`) VALUES (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `businessad` (`SellerID`) VALUES (:SellerID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\BusinessModel.php(72): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\BuyerController.php(76): App\Models\BusinessModel->saveTransaction([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\BuyerController->postTransaction('2')
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyerController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 19:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 20:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-28 21:51:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\SellerController::$businessModel is deprecated in APPPATH\Controllers\SellerController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SellerController->postAd()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SellerController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-10-28 21:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 21:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 22:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 22:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 22:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-28 22:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
