@@ -1,0 +1,193 @@
+ERROR - 2024-11-02 17:05:44 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=8876 in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 184)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outloo...', 'Sweet#reat2')
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outloo...', 'Sweet#reat2')
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outloo...', 'Sweet#reat2')
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-11-02 17:05:44 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=8876 in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 184)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-02 17:05:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `buyer`
+WHERE `Email` = :Email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-02 17:05:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `seller`
+WHERE `Email` = :Email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\SellerModel.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Authentication.php(128): App\Models\SellerModel->validateLogin('amtreats@outlook.com', 'Sweet#reat2')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->loginSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-02 17:15:34 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=11536 in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 184)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'shopusc_db', 3306, '', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-02 17:15:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `buyer`
+WHERE `Email` = :Email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\BuyerModel.php(25): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Authentication.php(111): App\Models\BuyerModel->validateLogin('cs@gmail.com', '$hopp1nG')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->loginBuyer()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-02 20:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-02 20:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-02 20:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-02 20:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

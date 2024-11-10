@@ -37,3 +37,7 @@ $routes->get('buyer/viewBusinessDetails/(:num)', 'BuyerController::viewBusinessD
 
 //posts order to transactions table
 $routes->post('buyer/postTransaction/(:num)', 'BuyerController::postTransaction/$1');
+
+$routes->get('buyer_transactions', 'BuyerController::transactions');
+
+$routes->get('seller_transactions', 'SellerController::sellerTransactions');

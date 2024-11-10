@@ -257,4 +257,25 @@ footer {
 
 
 
+/* alt styles */
 
+.dashboard-title {
+    color: #19B053;
+}
+
+.transaction-card {
+    background-color: white;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.section-divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+}

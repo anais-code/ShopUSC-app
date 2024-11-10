@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\BuyerModel;
 use App\Models\BusinessModel;
 use App\Models\TransactionModel;
+use App\Models\SellerModel;
 
 
 class BuyerController extends BaseController
@@ -81,7 +82,53 @@ class BuyerController extends BaseController
         }
         
         //return to businessdetails page with success message
-        return redirect()->to('buyer/viewBusinessDetails/' . $adID)->with('success', 'Transaction was recorded.');
-        
+       // return redirect()->to('buyer/viewBusinessDetails/' . $adID)->with('success', 'Transaction was recorded.');
+       return redirect()->to('buyer_transactions')->with('success', 'Transaction was successful.');
     }
+
+    public function transactions()
+    {
+        $buyerID = session()->get('user_id');
+
+        //using transaction and seller models
+        $transactionModel = new TransactionModel();
+        $sellerModel = new SellerModel();
+
+        //get upcoming transction data
+
+        $upcomingTransactions = $transactionModel->getUpcomingTransactions($buyerID);
+        //hold data in arr
+        $upcomingTransactionsArr =[];
+
+        foreach($upcomingTransactions as $transaction){
+            $seller = $sellerModel->find($transaction['SellerID']);
+            $upcomingTransactionsArr[] = [
+                'transaction' => $transaction['Transaction'],
+                'businessName' => $seller['BusinessName'],
+                'chosenDate' => $transaction['ChosenDate'],
+                'chosenTime' => $transaction['ChosenTime'],
+                'contact' => $seller['TelNumber'],
+            ];
+        }
+
+        $pastTransactions = $transactionModel->getPastTransactions($buyerID);
+        // Hold past transactions data in an array
+        $pastTransactionsArr = [];
+
+    foreach ($pastTransactions as $transaction) {
+        $seller = $sellerModel->find($transaction['SellerID']);
+        $pastTransactionsArr[] = [
+            'transaction' => $transaction['Transaction'],
+            'businessName' => $seller['BusinessName'], // Handle seller not found
+            'chosenDate' => $transaction['ChosenDate'],
+            'chosenTime' => $transaction['ChosenTime'],
+            'contact' => $seller['TelNumber'], // Handle seller not found
+        ];
+    }
+
+        return view('buyer_transactions', ['upcomingTransactions' => $upcomingTransactionsArr,
+        'pastTransactions' => $pastTransactionsArr,
+        ]);
+    }
+
 }
