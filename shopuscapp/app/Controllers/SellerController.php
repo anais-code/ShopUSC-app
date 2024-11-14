@@ -94,7 +94,7 @@ class SellerController extends BaseController
         }
     }
 
-    //function for seller transactions
+    //function for seller to view transactions
     public function sellerTransactions()
     {
         $sellerID = session()->get('user_id');
@@ -104,11 +104,11 @@ class SellerController extends BaseController
         $buyerModel = new BuyerModel();
 
         //get upcoming transction data
-
         $upcomingSellerTransactions = $transactionModel->getUpcomingSellerTransactions($sellerID);
         //hold data in arr
         $upcomingSellerTransactionsArr =[];
 
+        //retrieve and save transactions data
         foreach($upcomingSellerTransactions as $sellerTransaction){
             $buyer = $buyerModel->find($sellerTransaction['BuyerID']);
             $upcomingSellerTransactionsArr[] = [
@@ -121,22 +121,25 @@ class SellerController extends BaseController
             ];
         }
 
+        //get past transaction data
         $pastSellerTransactions = $transactionModel->getPastSellerTransactions($sellerID);
-        // Hold past transactions data in an array
+        //Hold past transactions data in arr
         $pastSellerTransactionsArr = [];
 
-    foreach ($pastSellerTransactions as $sellerTransaction) {
-        $buyer = $buyerModel->find($sellerTransaction['BuyerID']);
-        $pastSellerTransactionsArr[] = [
-            'transaction' => $sellerTransaction['Transaction'],
-            'buyerFirstName' => $sellerTransaction['FirstName'],
-            'buyerLastName' => $sellerTransaction['LastName'],
-            'chosenDate' => $sellerTransaction['ChosenDate'],
-            'chosenTime' => $sellerTransaction['ChosenTime'],
-            'contact' => $buyer['TelNumber'],
-        ];
-    }
+        //retrieve and save transactions data
+        foreach ($pastSellerTransactions as $sellerTransaction) {
+            $buyer = $buyerModel->find($sellerTransaction['BuyerID']);
+            $pastSellerTransactionsArr[] = [
+                'transaction' => $sellerTransaction['Transaction'],
+                'buyerFirstName' => $sellerTransaction['FirstName'],
+                'buyerLastName' => $sellerTransaction['LastName'],
+                'chosenDate' => $sellerTransaction['ChosenDate'],
+                'chosenTime' => $sellerTransaction['ChosenTime'],
+                'contact' => $buyer['TelNumber'],
+            ];
+        }
 
+        //pass upcoming and past transaction data to view
         return view('seller_transactions', ['upcomingSellerTransactions' => $upcomingSellerTransactionsArr,
         'pastSellerTransactions' => $pastSellerTransactionsArr,
         ]);

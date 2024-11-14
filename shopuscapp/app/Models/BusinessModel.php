@@ -63,6 +63,20 @@ class BusinessModel extends Model
                 ->getFirstRow('array');
     }
 
+    //function to allow buyer to search for business by name or search by product/ services
+    public function searchBusinessesAndProducts($searchTerm)
+    {
+        return $this->select('businessad.AdID, seller.SellerID, seller.BusinessName, seller.BusinessDescription, seller.BusinessCategory, seller.BusinessType, businessad.ProductDetails, businessad.Availability, businessad.CoverPhoto')
+        ->join('seller', 'seller.SellerID = businessad.SellerID')
+        ->groupStart()
+            ->like('seller.BusinessName', $searchTerm)
+            //extract assoc array JSON data stored in table
+            ->orWhere("JSON_UNQUOTE(JSON_EXTRACT(businessad.ProductDetails, '$[*].detail')) LIKE '%$searchTerm%'")
+        ->groupEnd()
+        ->get()
+        ->getResultArray();
+    }
+
 }
 
     

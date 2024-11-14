@@ -17,25 +17,38 @@ class BuyerController extends BaseController
         $buyerID = session()->get('user_id');
         $buyer = $buyerModel->find($buyerID);
         $firstName = $buyer['FirstName'];
-        //pass their information to the view
-        $data =[
-            'firstName' => $firstName,
-        ];
-        //show business data 
-        $businessModel = new BusinessModel();
-        $data['businesses'] = $businessModel->getAllBusinessData();
         
+        //gets search term from business_listing search bar
+        $searchTerm = $this->request->getGet('search');
+        $businessModel = new BusinessModel();
+        
+        //if there is a search term, use function to determine if it is a business or product search
+        //get matching db data from model
+        if($searchTerm){
+            $businesses = $businessModel->searchBusinessesAndProducts($searchTerm);
+        //else return list of all businesses (default)
+        } else {
+            $businesses = $businessModel->getAllBusinessData();
+        }
+        //save data retrieved
+        $data = [
+            'firstName' => $firstName,
+            'businesses' => $businesses,
+        ];
+        
+        //pass data to view
         return view('business_listing', $data);
     }
 
 
+    //function to let buyer view details of a specific business
     public function viewBusinessDetails($adID)
     {
         //show ad data for business
         $businessModel = new BusinessModel();
         $businessDetails = $businessModel->getAdByID($adID);
 
-        //throws an error message if 
+        //throws an error message if business details not founds
         if (!$businessDetails) {
             return redirect()->to('business_listing')->with('error', 'Business not found');
         }
@@ -44,6 +57,7 @@ class BuyerController extends BaseController
         return view('business_details', ['businessDetails' => $businessDetails]);
     }
 
+    //function to allow buyer to submit an order/appointment form for a specific business
     public function postTransaction($adID)
     {
         //define models
@@ -53,18 +67,10 @@ class BuyerController extends BaseController
         //retrieve seller id from ad details
         $businessDetails = $businessModel->getAdByID($adID);
         
-        /*if (!$businessDetails) {
-            return redirect()->to('business_listing')->with('error', 'Business not found');
-        }*/
-        
         //get buyerID from the session
         $buyerModel = new BuyerModel();
         $buyerID = session()->get('user_id');
         $buyer = $buyerModel->find($buyerID);
-
-        /*if (!isset($businessDetails['SellerID'])) {
-            return redirect()->to('business_listing')->with('error', 'Seller not found for the selected ad.');
-        }*/
 
         //form + buyer/seller data to be inserted into transactions table
         $transactionsData = [
@@ -82,10 +88,10 @@ class BuyerController extends BaseController
         }
         
         //return to businessdetails page with success message
-       // return redirect()->to('buyer/viewBusinessDetails/' . $adID)->with('success', 'Transaction was recorded.');
        return redirect()->to('buyer_transactions')->with('success', 'Transaction was successful.');
     }
 
+    //function for buyer to view their transactions
     public function transactions()
     {
         $buyerID = session()->get('user_id');
@@ -95,11 +101,11 @@ class BuyerController extends BaseController
         $sellerModel = new SellerModel();
 
         //get upcoming transction data
-
         $upcomingTransactions = $transactionModel->getUpcomingTransactions($buyerID);
         //hold data in arr
         $upcomingTransactionsArr =[];
 
+        //retrieve and save transactions data
         foreach($upcomingTransactions as $transaction){
             $seller = $sellerModel->find($transaction['SellerID']);
             $upcomingTransactionsArr[] = [
@@ -111,21 +117,24 @@ class BuyerController extends BaseController
             ];
         }
 
+        //get past transaction data
         $pastTransactions = $transactionModel->getPastTransactions($buyerID);
-        // Hold past transactions data in an array
+        // Hold past transactions data in arr
         $pastTransactionsArr = [];
 
-    foreach ($pastTransactions as $transaction) {
-        $seller = $sellerModel->find($transaction['SellerID']);
-        $pastTransactionsArr[] = [
-            'transaction' => $transaction['Transaction'],
-            'businessName' => $seller['BusinessName'], // Handle seller not found
-            'chosenDate' => $transaction['ChosenDate'],
-            'chosenTime' => $transaction['ChosenTime'],
-            'contact' => $seller['TelNumber'], // Handle seller not found
-        ];
-    }
+        //retrieve and save transactions data
+        foreach ($pastTransactions as $transaction) {
+            $seller = $sellerModel->find($transaction['SellerID']);
+            $pastTransactionsArr[] = [
+                'transaction' => $transaction['Transaction'],
+                'businessName' => $seller['BusinessName'],
+                'chosenDate' => $transaction['ChosenDate'],
+                'chosenTime' => $transaction['ChosenTime'],
+                'contact' => $seller['TelNumber'],
+            ];
+        }
 
+        //pass upcoming and past transaction data to view
         return view('buyer_transactions', ['upcomingTransactions' => $upcomingTransactionsArr,
         'pastTransactions' => $pastTransactionsArr,
         ]);
