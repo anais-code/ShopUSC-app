@@ -15,8 +15,8 @@
                 <a class="navbar-brand" href="<?= base_url('homepage'); ?>">
                     <img src="<?= base_url('assets/imgs/USC-7-removebg-preview.png'); ?>" alt="Shop USC logo" class="logo" style=" top: 1em; left: 1em; height: 3em; z-index: 3;">
                 </a>
-                <form class="d-flex mx-auto">
-                    <input class="form-control me-2" type="search" placeholder="search" aria-label="Search">
+                <form class="d-flex mx-auto" action="<?= base_url('business_listing') ?>" method="GET">
+                <input class="form-control me-2" type="search" name="search" placeholder="search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
                 <div class="navbar-nav text-center">
