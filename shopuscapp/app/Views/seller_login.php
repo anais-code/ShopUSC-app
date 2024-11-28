@@ -52,6 +52,25 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="/assets/scripts/script.js"></script>
+        <script>
+            // Disable form submission if there are invalid fields
+            (() => {
+                'use strict'
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission if invalid
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        // Add Bootstrap's validation feedback style
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
     </body>
 </html>

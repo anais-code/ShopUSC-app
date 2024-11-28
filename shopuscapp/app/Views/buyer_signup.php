@@ -54,9 +54,9 @@
                             <!--rows for password-->
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="password (8-20 characters)" 
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="password (8-20 characters, 1 uppercase, 1 digit, 1 symbol)" 
                                            style="background-color: #F5F5F5; color: #444054; border-color: #19B053; font-family: Playfair Display, serif;" required>
-                                           <div class="invalid-feedback">Password must be 8-20 characters, with at least one uppercase, one digit, and one special character</div>
+                                           <div class="invalid-feedback">Password must be 8-20 characters, with at least one uppercase, one digit, and one symbol</div>
                                 </div>
                             </div>
                             <div class="row mb-3">

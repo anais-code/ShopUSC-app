@@ -61,6 +61,21 @@ class TransactionModel extends Model
                     ->findAll();
     }
 
-
+    //counts num of upcoming transactions
+    public function countSellerUpcomingTransactions($sellerID)
+    {
+        return $this->where('SellerID', $sellerID)
+                    ->where('ChosenDate >=', date('Y-m-d'))
+                    ->countAllResults();
+    }
+    
+    //counts num of past transactions
+    public function countSellerPastTransactions($sellerID)
+    {
+        return $this->where('SellerID', $sellerID)
+                    ->where('ChosenDate <', date('Y-m-d'))
+                    ->countAllResults();
+    }
 
 }
+
