@@ -28,6 +28,11 @@ class SellerController extends BaseController
         $businessModel = new BusinessModel();
         $ad = $businessModel->getAdBySeller($sellerID);
 
+        //count transactions
+        $transactionModel = new TransactionModel();
+        $numOfUpcomingTransactions = $transactionModel->countSellerUpcomingTransactions($sellerID);
+        $numOfPastTransactions = $transactionModel->countSellerPastTransactions($sellerID);
+
         //check if ad exists and pass seller and ad details
         if ($ad) {
             $data = [
@@ -36,7 +41,9 @@ class SellerController extends BaseController
                 'businessType' => $businessType,
                 'businessCategory' => $businessCategory,
                 'businessDescription' => $businessDescription,
-                'ad' => $ad, // passing ad details
+                'ad' => $ad,
+                'numOfUpcomingTransactions' => $numOfUpcomingTransactions,
+                'numOfPastTransactions' => $numOfPastTransactions,
             ];
         } else {
         //if seller doesn't have an ad then pass null along with a message
@@ -52,6 +59,13 @@ class SellerController extends BaseController
     }
         return view('seller_dashboard', $data);
     }
+
+     //logout function
+     public function logout()
+     {
+         session()->destroy();
+         return redirect()->to('homepage');
+     }
 
     //function to take form data from seller dash to save ad
     public function postAd()
@@ -91,6 +105,36 @@ class SellerController extends BaseController
             //inserts ad into businessad db and redirects seller to dash to see ad details
             $this->businessModel->saveAd($data);
             return redirect()->to('seller_dashboard');
+        }
+    }
+
+    //function to update ad
+    public function updateProductDetails()
+    {
+        $this->businessModel = new BusinessModel();
+
+        if($this->request->getMethod()=== 'post'){
+            $sellerID = session()->get('user_id');
+
+            //get updated prod details
+            $productDetails = $this->request->getPost('product-details');
+            $productCosts = $this->request->getPost('product-cost');
+            $updatedDetails = [];
+
+            //put data in arr
+            foreach($productDetails as $index => $detail){
+                $updatedDetails[] = [
+                    'detail' => $detail,
+                    'cost' => $productCosts[$index] ?? 0,
+                ];
+            }
+            $this->businessModel
+                ->where('SellerID', $sellerID)
+                ->set('ProductDetails', json_encode($updatedDetails))
+                ->update();
+            
+                return redirect()->to('seller_dashboard')
+                                ->with('success', 'Product details updated');
         }
     }
 

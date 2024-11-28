@@ -54,9 +54,9 @@
                             <!--rows for password-->
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="password (8-20 characters)" 
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="password (8-20 characters, 1 uppercase, 1 digit, 1 symbol)" 
                                            style="background-color: #F5F5F5; color: #444054; border-color: #19B053; font-family: Playfair Display, serif;" required>
-                                           <div class="invalid-feedback">Password must be 8-20 characters, with at least one uppercase, one digit, and one special character</div>
+                                           <div class="invalid-feedback">Password must be 8-20 characters, with at least one uppercase, one digit, and one symbol</div>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -72,7 +72,7 @@
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" id="business-name" name="business-name" placeholder="business name" 
                                     style="background-color: #F5F5F5; color: #444054; border-color: #19B053; font-family: Playfair Display, serif;" required>
-                                    <div class="invalid-feedback">please enter the name of the business</div>
+                                    <div class="invalid-feedback">please enter the name of your business</div>
                                 </div>
                                 <div class="col-md-6">
                                     <select class="form-select" name="business-type" aria-label="business type" 
@@ -127,6 +127,85 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="/assets/scripts/script.js"></script>
+        <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    const password = document.getElementById('password');
+                    const confirmPassword = document.getElementById('confirm-password');
+                    const phoneNumber = document.getElementById('tel-number'); // Adjusted to match your form
+                    const businessType = document.querySelector('select[name="business-type"]');
+                    const businessCategory = document.querySelector('select[name="business-category"]');
+                    const businessDescription = document.getElementById('business-description');
+
+                    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,20}$/;
+                    const phonePattern = /^1868\d{7}$/;
+
+                    // Custom password strength validation
+                    if (!passwordPattern.test(password.value)) {
+                        password.setCustomValidity("Password must be 8-20 characters, with at least one uppercase letter, one digit, and one special character.");
+                    } else {
+                        password.setCustomValidity("");
+                    }
+
+                    // Custom confirm password validation
+                    if (password.value !== confirmPassword.value) {
+                        confirmPassword.setCustomValidity("Passwords must match.");
+                    } else {
+                        confirmPassword.setCustomValidity("");
+                    }
+
+                    // Phone number validation
+                    if (!phonePattern.test(phoneNumber.value)) {
+                        phoneNumber.setCustomValidity("Phone number must be in the format 1868xxxxxxx");
+                    } else {
+                        phoneNumber.setCustomValidity("");
+                    }
+
+                    // Business type validation
+                    if (businessType.value === "") {
+                        businessType.setCustomValidity("Please select a business type.");
+                    } else {
+                        businessType.setCustomValidity("");
+                    }
+
+                    // Business category validation
+                    if (businessCategory.value === "") {
+                        businessCategory.setCustomValidity("Please select a business category.");
+                    } else {
+                        businessCategory.setCustomValidity("");
+                    }
+
+                    // Business description validation (not empty)
+                    if (businessDescription.value.trim() === "") {
+                        businessDescription.setCustomValidity("Please enter a business description.");
+                    } else {
+                        businessDescription.setCustomValidity("");
+                    }
+
+                    // If the form is not valid, prevent submission
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+        function updateCharCount() {
+            const textarea = document.getElementById("business-description");
+            const charCount = document.getElementById("char-count");
+            const charsRemaining = 500 - textarea.value.length;
+            charCount.textContent = charsRemaining + " characters remaining";
+        }
+        </script>
+
     </body>
 </html>

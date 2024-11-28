@@ -70,10 +70,10 @@
                 <!--start of right col-->
                 <div class="col-md-5">
                     <div class="border rounded p-3 bg-white">
-                        <h1 class="h3">Order/Book</h1>
+                        <h3 style="text-align: center;" >Order/Book</h3>
                         
                         <!-- order form-->
-                        <form action="<?= site_url('buyer/postTransaction/' . $businessDetails['AdID']) ?>" method="post">
+                        <form class="needs-validation" novalidate action="<?= site_url('buyer/postTransaction/' . $businessDetails['AdID']) ?>" method="post">
                             <div class="row mb-3">
                                 <div class="col-md-12">
                                     <textarea type="text" class="form-control" id="business-description" name="transaction" placeholder="Enter order here (500 characters max.)" 
@@ -84,11 +84,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="datePicker">Select Date</label>
-                                <input type="date" class="form-control" id="chosen-date" name="chosen-date" placeholder="Select Date">
+                                <input type="date" class="form-control" id="chosen-date" name="chosen-date" placeholder="Select Date" required>
                             </div>
                             <div class="mb-3">
                                 <label for="timePicker">Select Time</label>
-                                <select class="form-control" id="chosen-time" name="chosen-time" placeholder="Select Time">
+                                <select class="form-control" id="chosen-time" name="chosen-time" placeholder="Select Time" required>
                                     <option value="" disabled selected>Select Time</option>
                                     <option>9:00 AM</option>
                                     <option>10:00 AM</option>
@@ -104,12 +104,25 @@
 
                                 </div>
                                     <button type="submit" class="btn-primary buyer_signup_btn">Submit</button>
-                                </div>
                             </div>
                         </form>
+
+                        <!--start of buyer review section-->
+                        <div class="mt-4">
+                            <h3>Reviews</h3>
+                            <div>
+                                <textarea id="rating-textbox" name="rating-textbox" class="form-control" rows="4" placeholder="Tell us what you think!" style="background-color: #F5F5F5; color: #444054; border-color: #19B053;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light mt-3" style="border-color: #19B053; border-radius: 50px; font-family: Playfair Display, serif; font-size: 15px; color: #071013;">Submit Review</button>
+                            <div>
+                                <h5 style="padding-top: 1.5em;">John Doe </h5>
+                                <p>sample review</p>
+                            </div>
+                        </div>
+                        <!--end of buyer review section-->
+                        
                     </div>
                 </div>
-
                 <!-- end of right col-->
             </div>
             <!--end of row-->
@@ -121,8 +134,28 @@
         </footer>
 
         
-        <script src="/assets/scripts/script.js"></script>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+        // Example of form validation using Bootstrap 5 custom validation
+        (function () {
+            'use strict'
 
+            // Fetch all the forms we want to apply validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission if invalid
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+</script>
     </body>
 </html>

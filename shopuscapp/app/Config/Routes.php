@@ -28,6 +28,10 @@ $routes->post('auth/loginSeller', 'Authentication::loginSeller');
 $routes->get('seller_dashboard', 'SellerController::index');
 $routes->get('business_listing', 'BuyerController::index');
 
+//routes for logout
+$routes->post('buyer/logout', 'BuyerController::logout');
+$routes->post('seller/logout', 'SellerController::logout');
+
 //posts ad to businessad table
 $routes->post('post_ad', 'SellerController::postAd');
 
@@ -41,3 +45,7 @@ $routes->post('buyer/postTransaction/(:num)', 'BuyerController::postTransaction/
 $routes->get('buyer_transactions', 'BuyerController::transactions');
 
 $routes->get('seller_transactions', 'SellerController::sellerTransactions');
+
+//route to update ad
+// Route for updating the product details (ad update)
+$routes->post('seller/updateProductDetails', 'SellerController::updateProductDetails');

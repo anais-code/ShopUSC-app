@@ -40,6 +40,13 @@ class BuyerController extends BaseController
         return view('business_listing', $data);
     }
 
+    //logout function
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('homepage');
+    }
+
 
     //function to let buyer view details of a specific business
     public function viewBusinessDetails($adID)

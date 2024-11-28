@@ -1,0 +1,599 @@
+ERROR - 2024-11-27 22:27:26 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:27:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:27:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:27:26 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:27:39 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:27:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:27:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'hjdjd\', \'djdj\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'hjdjd\', \'djdj\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:27:39 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'hjdjd\', \'djdj\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'hjdjd\', \'djdj\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'hjdjd\', \'djdj\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:28:12 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:28:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:28:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'\', \'hdhhd\', \'bdbdb\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'\', \'hdhhd\', \'bdbdb\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:28:12 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'\', \'hdhhd\', \'bdbdb\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'\', \'hdhhd\', \'bdbdb\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'\', \'hdhhd\', \'bdbdb\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:28:30 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:28:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:28:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'hdhhdhdhd\', \'hdhhd\', \'bdbdb\', NULL, \'household\', \'hhdhd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'hdhhdhdhd\', \'hdhhd\', \'bdbdb\', NULL, \'household\', \'hhdhd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:28:30 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'hdhhdhdhd\', \'hdhhd\', \'bdbdb\', NULL, \'household\', \'hhdhd\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'hdhhdhdhd\', \'hdhhd\', \'bdbdb\', NULL, \'household\', \'hhdhd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'ndhd\', \'hhd\', \'bdbd\', \'hdhhdhdhd\', \'hdhhd\', \'bdbdb\', NULL, \'household\', \'hhdhd\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:31:26 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:31:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:31:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:31:26 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-27 22:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:33:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 22:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-27 22:34:34 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:34:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:34:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:34:34 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:37:39 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:37:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:37:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:37:39 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:39:40 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:39:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:39:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:39:40 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:47:12 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:47:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:47:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:47:12 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 22:47:54 --> mysqli_sql_exception: Column 'BusinessType' cannot be null in C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ShopUSC\shopuscapp\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ShopUSC\shopuscapp\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Models\SellerModel.php(18): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ShopUSC\shopuscapp\app\Controllers\Authentication.php(97): App\Models\SellerModel->register(Array)
+#9 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+#10 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+#11 C:\xampp\htdocs\ShopUSC\shopuscapp\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ShopUSC\shopuscapp\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-11-27 22:47:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:47:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:47:54 --> [Caused by] mysqli_sql_exception: Column 'BusinessType' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (\'\', \'\', \'\', \'\', \'\', \'\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `seller` (`FirstName`, `LastName`, `Email`, `Password`, `TelNumber`, `BusinessName`, `BusinessType`, `BusinessCategory`, `BusinessDescription`) VALUES (:FirstName:, :LastName:, :Email:, :Password:, :TelNumber:, :BusinessName:, :BusinessType:, :BusinessCategory:, :BusinessDescription:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SellerModel.php(18): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Authentication.php(97): App\Models\SellerModel->register([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Authentication->registerSeller()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authentication))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-27 23:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-27 23:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -19,10 +19,24 @@
                 <input class="form-control me-2" type="search" name="search" placeholder="search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
+                <!--start of icon drop-->
                 <div class="navbar-nav text-center">
-                    <a class="nav-link" href="#"><img src="assets/imgs/user.png" alt="User Icon" class="user-icon" style="height: 2em;"></a>
-                    <span class="navbar-text" style="margin-left: 0.5em;">Welcome <?= esc($firstName); ?></span>
+                    <div class="dropdown d-flex align-items-center">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="buyerDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/imgs/user.png" alt="User Icon" class="user-icon" style="height: 2em;">
+                            <span class="navbar-text" style="margin-left: 0.5em;">Welcome <?= esc($firstName); ?></span>
+                        </a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="buyerDropdown" style="background-color: transparent !important; border: none;">
+                            <li>
+                                <form action="<?= site_url('buyer/logout'); ?>" method="post">
+                                    <button type="submit" class="btn btn-light" style="border-color: #E36588; border-radius: 50px; font-family: Playfair Display, serif; font-size: 15px; color: #071013;">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <!--end of icon drop-->
             </div>
         </nav> 
         
@@ -66,6 +80,51 @@
                 <?php endforeach; ?>
             </div>
             <!--end of carousel-->
+
+            <!-- start of categories-->
+            <div class="container">
+                <?php
+                //dynamically get categories
+                $categories = array_unique(array_column($businesses, 'BusinessCategory'));
+                ?>
+                <?php foreach($categories as $category): ?>
+                    <!--creates section for each cat-->
+                    <div class="row">
+                        <h2 style="color: #19B053; font-family: Merriweather, sans-serif; font-size: 35px; font-weight:bold; margin-top:0.2em;"><?= esc(ucfirst($category)) ?></h2>
+                        <?php
+                        //filter by category
+                        $filteredBusinesses = array_filter($businesses, function($business) use ($category) {
+                            return $business['BusinessCategory'] === $category;
+                        });
+                        ?>
+                        <?php foreach($filteredBusinesses as $business): ?>
+                            <!--cards for businesses-->
+                            <div class="col-md-3 mb-4">
+                                <div class="card">
+                                    <img src="<?= esc(base_url($business['CoverPhoto'] ?? 'assets/imgs/Business Img.jpg')) ?>" class="card-img-top" alt="Cover Photo" style="width: 100%; height: 150px; object-fit: cover;">
+                                    <div class="card-body" style="border: 1.5px solid #f3e76e;">
+                                        <h5 class="card-title"><?= esc($business['BusinessName']) ?></h5>
+                                        <p class="card-text" style="color: #444054">Category: <?= esc($business['BusinessCategory']) ?></p>
+                                        <div>
+                                            <span class="btn btn-light" style="pointer-events: none; border-color: rgba(199,228,185); border-radius: 60px; font-family: Playfair Display, serif; font-size: 10px; color: #071013;">
+                                            <?= esc($business['BusinessType']) ?>
+                                            </span>
+                                        </div>
+                                        <div style="padding-top:10px;">
+                                            <span class="buyer_signup_btn" style="border-color: border-radius: 60px; font-family: Playfair Display, serif; font-size: 10px; color: #071013; padding: 5px 10px;">
+                                            <a href="<?= isset($business['AdID']) ? base_url('buyer/viewBusinessDetails/' . $business['AdID']) : '#' ?>" style="color: #071013; text-decoration: none;">View Business</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end of cards-->
+                        <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+             <!-- end of categories-->
+
         </div>
         
         <footer class="text-center mt-4" style="background-image: linear-gradient(to right, rgba(118,218,72) ,rgba(199,228,185));">

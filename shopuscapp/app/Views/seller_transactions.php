@@ -22,7 +22,7 @@
         
         <div class="container my-4">
         <div class="header-container d-flex align-items-center mb-4">
-        <a href="<?= base_url('business_listing'); ?>">
+        <a href="<?= base_url('seller_dashboard'); ?>">
                     <img src="<?= base_url('assets/imgs/business_listing_icon.png'); ?>" alt="Business Listing Icon" class="icon" style="height: 3em; margin-left: 0.5em; margin-right: 1.5em;">
                 </a>
                 <h1 style="color: #19B053; font-family: Merriweather, sans-serif; font-size: 40px; font-weight:bold; margin-top:0.2em;">Transaction Dashboard</h1>
